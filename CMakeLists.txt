@@ -5,7 +5,7 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 project(helloworld VERSION ${PROJECT_VESRION})
 
-find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+find_package(Gtest REQUIRED)
 
 configure_file(version.h.in version.h)
 
@@ -29,7 +29,7 @@ target_link_libraries(helloworld_cli PRIVATE
     helloworld
 )
 target_link_libraries(test_version
-    ${Boost_LIBRARIES}
+    ${Gtest_LIBRARIES}
     helloworld
 )
 
