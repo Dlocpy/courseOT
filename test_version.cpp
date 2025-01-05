@@ -1,14 +1,10 @@
-#define BOOST_TEST_MODULE test_version
+#define GOOGLE_TEST_MODULE test_version
 
 #include "lib.h"
 
-#include <boost/test/unit_test.hpp>
+#include <gtest/gtest.h>
 
-BOOST_AUTO_TEST_SUITE(test_version)
-
-BOOST_AUTO_TEST_CASE(test_valid_version)
-{
-    BOOST_CHECK(version() > 7);
+TEST(test_version, test_valid_version) {
+    EXPECT_GT(version(),7);
 }
 
-BOOST_AUTO_TEST_SUITE_END()
