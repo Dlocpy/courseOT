@@ -6,7 +6,7 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 project(helloworld VERSION ${PROJECT_VESRION})
 
 enable_testing()
-add_subdirecory(googletest)
+add_subdirectory(googletest)
 
 configure_file(version.h.in version.h)
 
