@@ -5,7 +5,8 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 project(helloworld VERSION ${PROJECT_VESRION})
 
-find_package(Gtest REQUIRED)
+enable_testing()
+add_subdirecory(googletest)
 
 configure_file(version.h.in version.h)
 
@@ -29,7 +30,7 @@ target_link_libraries(helloworld_cli PRIVATE
     helloworld
 )
 target_link_libraries(test_version
-    ${Gtest_LIBRARIES}
+    gtest_main
     helloworld
 )
 
